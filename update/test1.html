@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+    <link rel="stylesheet" href="carte/carte.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .partie1 {
+            background-color: red;
+            height: 20vw;
+            width: 100%;
+        }
+
+        .partie2 {
+            display: flex;
+            height: 100vw;
+            gap: 2vw;
+        }
+
+        .partie2 .formulaire {
+            background-color: yellow;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vw;
+        }
+
+        .partie2 .formulaire button {
+            width: 4vw;
+            height: 2vw;
+            margin-top: 3vw;
+        }
+
+        /* .partie2 .formulaire .btn1 {
+            width: 5vw;
+            margin-top: 1vw;
+        } */
+
+
+
+        .partie2 .terrain {
+            background-color: green;
+            width: 70%;
+        }
+
+        .partie2 .terrain img {
+            width: 100%;
+            height: 100%;
+            /* margin-left: 4vw; */
+        }
+
+        .partie2 .terrain .forma2 img {
+            height: 17vw;
+            width: 12vw;
+        }
+
+        .partie2 .terrain .forma2 .attack {
+            display: flex;
+            gap: 12vw;
+            margin-top: -90vw;
+            margin-left: 18vw;
+            height: 20vw;
+            width: 20vw;
+            /* flex-direction: column;*/
+        }
+
+        .partie2 .terrain .forma2 .attack2 {
+            display: flex;
+            gap: 5vw;
+            margin-top: -90vw;
+            margin-left: 12vw;
+            height: 20vw;
+            width: 20vw;
+            /* flex-direction: column;*/
+        }
+
+        .partie2 .terrain .forma2 .coter1 {
+            display: flex;
+            gap: 100px;
+            position: relative;
+            bottom: 5vw;
+            /* margin-top: -100vw;
+            margin-left: 15vw;
+            height: 20vw;
+            width: 20vw; */
+            /* flex-direction: column; */
+        }
+
+        .partie2 .terrain .forma2 .coter2 {
+            display: flex;
+            gap: 100px;
+            position: relative;
+            top: 5vw;
+            /* margin-top: -100vw;
+            margin-left: 15vw;
+            height: 20vw;
+            width: 20vw; */
+            /* flex-direction: column; */
+        }
+
+        .partie2 .terrain .forma2 .midle {
+            display: flex;
+            gap: 5vw;
+            margin-top: 3vw;
+            margin-left: 3vw;
+            height: 20vw;
+            width: 15vw;
+        }
+
+        .partie2 .terrain .forma2 .midle2 {
+            display: flex;
+            gap: 9vw;
+            margin-top: 3vw;
+            margin-left: 8vw;
+            height: 20vw;
+            width: 15vw;
+        }
+
+        .partie2 .terrain .forma2 .deffense {
+            display: flex;
+            gap: 5vw;
+            margin-top: 3vw;
+            margin-left: 2vw;
+            height: 20vw;
+            width: 15vw;
+
+        }
+
+        .partie2 .terrain .forma2 #GK {
+            display: flex;
+            gap: 30px;
+            margin-top: 3vw;
+            margin-left: 28vw;
+            height: 20vw;
+            width: 15vw;
+            height: 17vw;
+            width: 12vw;
+
+        }
+
+
+        /* .partie2 .terrain .players img{
+            height: 50px;
+            width: 90px;
+             background-color: gray; 
+        } */
+        .partie3 {
+            background-color: blue;
+            width: 100%;
+            height: 20vw;
+        }
+
+        #playerForm {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+        .differente {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            .partie1 {
+                height: 25vw;
+                /* Ajuste la hauteur pour s'adapter aux petits écrans */
+            }
+
+            .partie2 {
+                flex-direction: column;
+                height: auto;
+                /* Adapte la hauteur automatiquement */
+                gap: 1vw;
+            }
+
+            .partie2 .formulaire {
+                width: 100%;
+                /* Occupe toute la largeur */
+                padding: 2vw;
+            }
+
+            .partie2 .formulaire button {
+                width: 50%;
+                /* Ajuste les boutons */
+                height: 6vw;
+            }
+
+            .partie2 .terrain {
+                width: 100%;
+                /* Occupe toute la largeur */
+                padding: 2vw;
+            }
+
+            .partie2 .terrain .forma2 img {
+                height: auto;
+                /* Adapte la hauteur automatiquement */
+                width: 20vw;
+                /* Réduit la largeur */
+            }
+
+            .partie2 .terrain .forma2 .attack {
+                display: flex;
+                gap: 16vw;
+                margin-top: -73vw;
+                margin-left: 33vw;
+                height: 15vw;
+                /* width: 20vw; */
+                /* flex-direction: column;*/
+            }
+
+            .partie2 .terrain .forma2 .attack2 {
+                display: flex;
+                gap: 13vw;
+                margin-top: -73vw;
+                margin-left: 23vw;
+                height: 15vw;
+                width: 15vw;
+                /* flex-direction: column;
+        }
+        .partie2 .terrain .forma2 .coter1 {
+            display: flex;
+            gap: 100px;
+            position: relative;
+            bottom: 5vw;
+            /* margin-top: -100vw;
+            margin-left: 15vw;
+            height: 20vw;
+            width: 20vw; */
+                /* flex-direction: column; */
+            }
+
+            .partie2 .terrain .forma2 .coter2 {
+                display: flex;
+                gap: 100px;
+                position: relative;
+                top: 5vw;
+                /* margin-top: -100vw;
+            margin-left: 15vw;
+            height: 20vw;
+            width: 20vw; */
+                /* flex-direction: column; */
+            }
+
+            .partie2 .terrain .forma2 .midle {
+                display: flex;
+                gap: 10vw;
+                margin-top: 3vw;
+                margin-left: 16vw;
+                height: 15vw;
+                /* width: 15vw;*/
+            }
+
+            .partie2 .terrain .forma2 .midle2 {
+                display: flex;
+                gap: 19vw;
+                margin-top: 5vw;
+                margin-left: 16vw;
+                height: 15vw;
+                width: 15vw;
+            }
+
+            .partie2 .terrain .forma2 .deffense {
+                display: flex;
+                gap: 16vw;
+                margin-top: 3vw;
+                margin-left: 6vw;
+                height: 15vw;
+                width: 90vw;
+
+            }
+
+            .partie2 .terrain .forma2 #GK {
+                display: flex;
+                /* gap: 30px; */
+                /* margin-top: 3vw; */
+                margin-left: 44vw;
+                /* height: 20vw; */
+                width: 15vw;
+                height: 15vw;
+                width: 12vw;
+            }
+
+            .partie3 {
+                height: 25vw;
+                /* Ajuste la hauteur pour s'adapter */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="partie1">
+        <label for="formation">
+            <select name="formation" id="formation">
+                <option id="Laformation" value=""> </option>
+                <option id="Laformation" value="4-4-2">4-4-2</option>
+                <option id="Laformation" value="4-3-3">4-3-3</option>
+
+            </select>
+        </label>
+    </section>
+    <section class="partie2">
+        <div class="formulaire">
+            <form id="playerForm">
+                <label for="name">Nom du joueur :</label>
+                <input type="text" id="name" name="name" placeholder="nom du joueur" required>
+
+
+                <label for="photo">Photo (URL) :</label>
+                <input type="url" id="photo" name="photo"
+                    placeholder="Ex: https://cdn.sofifa.net/players/230/621/25_120.png" required>
+
+                <label for="position">Position :</label>
+                <select id="positionn" name="position" required>
+                    <option id="position" value=""></option>
+                    <option id="position" value="CB">Défenseur central (CB)</option>
+                    <option id="position" value="LB">Arrière gauche (LB)</option>
+                    <option id="position" value="RB">Arrière droit (RB)</option>
+                    <option id="position" value="CM">Milieu central (CM)</option>
+                    <option id="position" value="LM">Milieu gauche (LM)</option>
+                    <option id="position" value="RM">Milieu droit (RM)</option>
+                    <option id="position" value="CF">Attaquant centre (CF)</option>
+                    <option id="position" value="LW">Ailier gauche (LW)</option>
+                    <option id="position" value="GK">Gardien de but (GK)</option>
+                    <option id="position" value="RW">Ailier droit (RW)</option>
+                </select>
+
+                <label for="nationality">Nationalité :</label>
+                <input type="text" id="nationality" name="nationality" placeholder="Ex: Italy" required>
+
+                <label for="flag">Drapeau (URL) :</label>
+                <input type="url" id="flag" name="flag" placeholder="Ex: https://cdn.sofifa.net/flags/it.png" required>
+
+                <label for="club">Club :</label>
+                <input type="text" id="club" name="club" placeholder="Ex: Paris Saint-Germain" required>
+
+                <label for="logo">Logo du club (URL) :</label>
+                <input type="url" id="logo" name="logo" placeholder="Ex: https://cdn.sofifa.net/meta/team/591/120.png"
+                    required>
+
+                <label for="rating">Note :</label>
+                <input type="number" id="rating" name="rating" placeholder="Ex: 89" required>
+                <div id="differente" class="differente">
+                    <!-- <label for="diving">Diving :</label>
+                    <input type="number" id="diving" name="diving" placeholder="Ex: 88" required>
+
+                    <label for="handling">Handling :</label>
+                    <input type="number" id="handling" name="handling" placeholder="Ex: 84" required>
+
+                    <label for="kicking">Kicking :</label>
+                    <input type="number" id="kicking" name="kicking" placeholder="Ex: 75" required>
+
+                    <label for="reflexes">Reflexes :</label>
+                    <input type="number" id="reflexes" name="reflexes" placeholder="Ex: 90" required>
+
+                    <label for="speed">Speed :</label>
+                    <input type="number" id="speed" name="speed" placeholder="Ex: 50" required>
+
+                    <label for="positioning">Positioning :</label>
+                    <input type="number" id="positioning" name="positioning" placeholder="Ex: 85" required> -->
+                </div>
+
+
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+        <div class="terrain" id="terrain">
+            <img src="images/stadium_background.png" alt="pic">
+            <div class="players forma2" id="players">
+                <!-- <div class="attack">
+                    <img id="ST1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="ST2" src="images/soutenance-croisser-image.png" alt="">
+                </div>
+                <div class="midle">
+                    <img id="LM" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                    <img id="CM1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CM2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RM" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                </div>
+                <div class="deffense">
+                    <img id="LB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                    <img id="CB1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CB2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                </div>
+                <img id="GK" src="images/soutenance-croisser-image.png" alt=""> -->
+
+            </div>
+        </div>
+    </section>
+    <section class="partie3">
+
+    </section>
+    <script>
+        const positionSelect = document.getElementById("positionn");
+        const container = document.getElementById("differente");
+
+        positionSelect.addEventListener("change", () => {
+            const selectedPosition = positionSelect.value;
+            container.innerHTML = ""; // Clear any existing dynamic fields
+
+            if (selectedPosition === "GK") {
+                // Add specific fields for GK
+                container.innerHTML = `
+                    <label for="diving">Diving :</label>
+                    <input type="number" id="diving" name="diving" placeholder="Ex: 88" required>
+
+                    <label for="handling">Handling :</label>
+                    <input type="number" id="handling" name="handling" placeholder="Ex: 84" required>
+
+                    <label for="kicking">Kicking :</label>
+                    <input type="number" id="kicking" name="kicking" placeholder="Ex: 75" required>
+
+                    <label for="reflexes">Reflexes :</label>
+                    <input type="number" id="reflexes" name="reflexes" placeholder="Ex: 90" required>
+
+                    <label for="speed">Speed :</label>
+                    <input type="number" id="speed" name="speed" placeholder="Ex: 50" required>
+
+                    <label for="positioning">Positioning :</label>
+                    <input type="number" id="positioning" name="positioning" placeholder="Ex: 85" required>
+                `;
+            } else {
+                container.innerHTML = `
+                    <label for="Pace">Pace :</label>
+                    <input type="number" id="Pace" name="Pace" placeholder="Ex: 88" required>
+
+                    <label for="Shooting">Shooting :</label>
+                    <input type="number" id="Shooting" name="Shooting" placeholder="Ex: 84" required>
+
+                    <label for="Passing">Passing :</label>
+                    <input type="number" id="Passing" name="Passing" placeholder="Ex: 75" required>
+
+                    <label for="Dribling">Dribling :</label>
+                    <input type="number" id="Dribling" name="Dribling" placeholder="Ex: 90" required>
+
+                    <label for="defending">defending :</label>
+                    <input type="number" id="defending" name="defending" placeholder="Ex: 50" required>
+
+                    <label for="Physical">Physical :</label>
+                    <input type="number" id="Physical" name="Physical" placeholder="Ex: 85" required>
+                `;
+            }
+        });
+
+
+        let container2 = document.getElementById("players");
+        const formationSelect = document.getElementById("formation");
+
+        formationSelect.addEventListener("change", () => {
+            const selectFormation = formationSelect.value;
+            container2.innerHTML = "";
+            if (selectFormation === "4-4-2") {
+                container2.innerHTML = `
+                
+                <div class="attack">
+                    <div id="ST1">
+                        <div class="card">
+                            <div class="player-image">
+                                <div class="player-stats">
+                                    <div class="rating">
+                                        <b>
+                                            <p>90</p>
+                                        </b>
+                                        <b>
+                                            <p>CF</p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <img src="../images/téléchargement-removebg-preview.png" alt="">
+
+                            </div>
+                            <div class="player-info">
+                                <p class="player-name">Nom de joueur</p>
+                                <div class="attributes">
+                                    <table>
+                                        <tr>
+                                            <th>PAC</th>
+                                            <th>SHO</th>
+                                            <th>PAS</th>
+                                            <th>DRI</th>
+                                            <th>DEF</th>
+                                            <th>RHY</th>
+                                        </tr>
+                                        <tr>
+                                            <td>80</td>
+                                            <td>87</td>
+                                            <td>90</td>
+                                            <td>94</td>
+                                            <td>33</td>
+                                            <td>64</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="icons">
+                                    <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag">
+                                    <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo">
+                                </div>
+                            </div>
+                        </div>
+                  
+                    </div>
+                
+                    <div id="ST2">
+                        <div class="card">
+                            <div class="player-image">
+                                <div class="player-stats">
+                                    <div class="rating">
+                                        <b>
+                                            <p>90</p>
+                                        </b>
+                                        <b>
+                                            <p>CF</p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <img src="../images/téléchargement-removebg-preview.png" alt="">
+
+                            </div>
+                            <div class="player-info">
+                                <p class="player-name">Nom de joueur</p>
+                                <div class="attributes">
+                                    <table>
+                                        <tr>
+                                            <th>PAC</th>
+                                            <th>SHO</th>
+                                            <th>PAS</th>
+                                            <th>DRI</th>
+                                            <th>DEF</th>
+                                            <th>RHY</th>
+                                        </tr>
+                                        <tr>
+                                            <td>80</td>
+                                            <td>87</td>
+                                            <td>90</td>
+                                            <td>94</td>
+                                            <td>33</td>
+                                            <td>64</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="icons">
+                                    <img src="https://cdn.sofifa.net/flags/ar.png" alt="flag">
+                                    <img src="https://cdn.sofifa.net/meta/team/239235/120.png" alt="logo">
+                                </div>
+                            </div>
+                        </div>
+                  
+                    </div>
+                </div>
+                <div class="midle">
+                    <img id="LM" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                    <img id="CM1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CM2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RM" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                </div>
+                <div class="deffense">
+                    <img id="LB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                    <img id="CB1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CB2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                </div>
+                <img id="GK" src="images/soutenance-croisser-image.png" alt="">
+
+            
+                `
+            } else {
+                container2.innerHTML = `
+                
+                <div class="attack2">
+                    <img id="LW" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="ST" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RW" src="images/soutenance-croisser-image.png" alt="">
+                </div>
+                <div class="midle2">
+                    <img id="CM1" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                    <img id="CM2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CM3" src="images/soutenance-croisser-image.png" class="coter1" alt="">
+                </div>
+                <div class="deffense">
+                    <img id="LB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                    <img id="CB1" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="CB2" src="images/soutenance-croisser-image.png" alt="">
+                    <img id="RB" src="images/soutenance-croisser-image.png" class="coter2" alt="">
+                </div>
+                <img id="GK" src="images/soutenance-croisser-image.png" alt="">
+
+            
+                `
+            }
+        })
+    </script>
+</body>
+
+</html>

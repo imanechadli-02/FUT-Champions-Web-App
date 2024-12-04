@@ -1,0 +1,70 @@
+
+.partie3{
+    display: flex;
+    gap: 2vw;
+}
+.partie3 .player-card{
+    background-image: url("images/badge_gold.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15%;
+}
+
+.partie3 .player-card .player-image .player-stats .rating {
+    margin-left: 2vw;
+    color: brown;
+    background: none;
+    margin-top: 4vw;
+    position: absolute;
+}
+
+.partie3 .player-card .player-image .player-stats .rating p {
+    margin: 0;
+    background: none;
+    font-size: 1.5vw;
+} 
+
+.partie3 .player-card .player-image  img{
+    width: 8vw;
+    height: 9vw;
+    margin-top: 4vw;
+    background: none;
+    margin-left: -11vw;
+}
+
+.partie3 .player-card .player-info {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    width: 100%;
+    margin-top: -2vw;
+}
+
+.partie3 .player-card .player-info .player-name{
+    margin-top: 2vw;
+    font-weight: bold;
+    background: none;
+
+}
+
+.partie3 .player-card .player-info .attributes table{
+    font-size: 0.9vw;
+    margin-top: -1vw;
+    /* margin-left: 0vw; */
+    /* background: none;*/
+
+}
+
+.partie3 .player-card .player-info .icons{
+    display: flex;
+    gap: 1.5vw;
+    background: none;
+}
+
+.partie3 .player-card .player-info .icons img{
+    height: 1.2vw;
+    width: 2vw;
+    background: none;
+    margin-top: -0.2vw;
+}

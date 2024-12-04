@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carte/carte.css">
+    <link rel="stylesheet" href="remplacant.css">
+
+
+</head>
+
+<body>
+    <section class="partie1">
+        <label for="formation">
+            <select name="formation" id="formation">
+                <option id="Laformation" value=""> choississez une formation</option>
+                <option id="Laformation" value="4-4-2">4-4-2</option>
+                <option id="Laformation" value="4-3-3">4-3-3</option>
+
+            </select>
+        </label>
+    </section>
+    <section class="partie2">
+        <div class="formulaire">
+            <form id="playerForm">
+                <label for="name">Nom du joueur :</label>
+                <input type="text" id="name" name="name" placeholder="nom du joueur" required>
+
+
+                <label for="photo">Photo (URL) :</label>
+                <input type="url" id="photo" name="photo"
+                    placeholder="Ex: https://cdn.sofifa.net/players/230/621/25_120.png" required>
+
+                <label for="position">Position :</label>
+                <select id="positionn" name="position" required>
+                    <option id="position" value=""></option>
+                    <option id="position" value="GK">Défenseur central (GK)</option>
+                    <option id="position" value="RB">Arrière gauche (RB)</option>
+                    <option id="position" value="CB1">Arrière droit (CB1)</option>
+                    <option id="position" value="CB2">Milieu central (CB2)</option>
+                    <option id="position" value="LB">Milieu gauche (LB)</option>
+                    <option id="position" value="RM">Milieu droit (RM)</option>
+                    <option id="position" value="CM2">Attaquant centre (CM2)</option>
+                    <option id="position" value="CM1">Ailier gauche (CM1)</option>
+                    <option id="position" value="CM3">Gardien de but (CM3)</option>
+                    <option id="position" value="LM">Ailier droit (LM)</option>
+                    <option id="position" value="ST2">Ailier droit (ST2)</option>
+                    <option id="position" value="ST">Ailier droit (ST)</option>
+                    <option id="position" value="LW">Ailier droit (LW)</option>
+                    <option id="position" value="RW">Ailier droit (RW)</option>
+                </select>
+
+                <label for="nationality">Nationalité :</label>
+                <input type="text" id="nationality" name="nationality" placeholder="Ex: Italy" required>
+
+                <label for="flag">Drapeau (URL) :</label>
+                <input type="url" id="flag" name="flag" placeholder="Ex: https://cdn.sofifa.net/flags/it.png" required>
+
+                <label for="club">Club :</label>
+                <input type="text" id="club" name="club" placeholder="Ex: Paris Saint-Germain" required>
+
+                <label for="logo">Logo du club (URL) :</label>
+                <input type="url" id="logo" name="logo" placeholder="Ex: https://cdn.sofifa.net/meta/team/591/120.png"
+                    required>
+
+                <label for="rating">Note :</label>
+                <input type="number" id="rating" name="rating" placeholder="Ex: 89" required>
+                <div id="differente" class="differente">
+                    
+                </div>
+
+
+                <button id="submit" type="button">Soumettre</button>
+            </form>
+        </div>
+        <div class="terrain" id="terrain">
+            <img src="images/stadium_background.png" alt="pic">
+            <div class="players forma2" id="players">
+                
+            </div>
+        </div>
+    </section>
+    <section id="players-list" class="partie3">
+        <h3>Remplacants :</h3>
+    </section>
+    <script src="script.js"></script>
+    <script src="ajouterJoueur.js"></script>
+    <script src="positionnementJoueur.js"></script>
+    <script src="positionJoueur.js"></script>
+    <script src="ajouterRemplacant.js"></script>
+    
+
+    
+
+
+</body>
+
+</html>

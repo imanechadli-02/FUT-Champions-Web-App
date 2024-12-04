@@ -111,3 +111,24 @@ function misajour(){
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let joueur = document.querySelector(".player-card");
+ joueur.addEventListener("click" , ()=>{
+    let nom = document.querySelector(".player-name").value;
+    console.log(nom)
+ })
